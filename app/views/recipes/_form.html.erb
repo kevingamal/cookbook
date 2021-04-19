@@ -48,17 +48,17 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.text_field :category_id %>
+    <%= collection_select(:recipe, :category_id, Category.all, :id, :name) %>
   </div>
 
   <div class="field">
     <%= form.label :recipe_type_id %>
-    <%= form.text_field :recipe_type_id %>
+    <%= collection_select(:recipe, :recipe_type_id, RecipeType.all, :id, :name) %>
   </div>
 
   <div class="field">
     <%= form.label :author_id %>
-    <%= form.text_field :author_id %>
+    <%= collection_select(:recipe, :author_id, Author.all, :id, :fullname) %>
   </div>
 
   <div class="actions">
